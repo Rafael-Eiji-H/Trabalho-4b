@@ -39,6 +39,8 @@ nav a:hover,
 .ativo {
     background-color: #ff4747;
     color: #0e0e0e;
+    transform: scale(1.05);
+
 }
 
 .banner {
@@ -54,7 +56,7 @@ nav a:hover,
     margin-bottom: 40px;
 }
 
-.banner-texto{
+.banner-texto {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px 40px;
     border-radius: 10px;
@@ -71,7 +73,6 @@ nav a:hover,
     color: #fff;
     text-shadow: 1px 1px 5px #000;
 }
-
 
 .destaques {
     text-align: center;
@@ -128,6 +129,43 @@ footer {
     font-size: 1em;
 }
 
+/*Animações*/
+
+/* === ANIMAÇÃO DE ENTRADA GERAL === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section, header, footer {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* === IMAGENS DOS FILMES === */
+.filme img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.filme img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff4747;
+}
+
+/* === BANNER === */
+.banner {
+    animation: fadeIn 1.2s ease;
+}
+
+
+
+
+
 @media (max-width: 600px) {
     header {
         flex-direction: column;
@@ -159,8 +197,8 @@ footer {
     .banner-texto p {
         font-size: 1rem;
     }
-
 }
+
 
 @media (min-width: 601px) and (max-width: 1024px) {
     header {
@@ -184,10 +222,10 @@ footer {
     .banner {
         height: 300px;
     }
-    
+
     .banner-texto h2 {
         font-size: 2rem;
-}
+    }
 
     .banner-texto p {
         font-size: 1.1rem;
