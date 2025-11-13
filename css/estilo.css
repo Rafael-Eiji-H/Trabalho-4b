@@ -10,8 +10,6 @@ body {
     background-color: #0e0e0e;
     color: white;
     font-family: Arial, sans-serif;
-    margin: 0;
-    min-height: 100vh;
 }
 
 header {
@@ -71,7 +69,6 @@ nav a:hover,
 .banner-texto p {
     font-size: 1.2rem;
     color: #fff;
-    text-shadow: 1px 1px 5px #000;
 }
 
 .destaques {
@@ -148,10 +145,6 @@ section, header, footer {
 }
 
 /* === IMAGENS DOS FILMES === */
-.filme img {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
 .filme img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px #ff4747;
@@ -161,8 +154,6 @@ section, header, footer {
 .banner {
     animation: fadeIn 1.2s ease;
 }
-
-
 
 /* ======== RESPONSIVIDADE ======== */
 
