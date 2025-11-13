@@ -164,70 +164,54 @@ section, header, footer {
 
 
 
+/* ======== RESPONSIVIDADE ======== */
 
+/* 1️⃣ Desktop grande */
+@media (min-width: 1200px) {
+    .cards {
+        justify-content: space-around;
+    }
+}
 
-@media (max-width: 600px) {
+/* 2️⃣ Tablets */
+@media (max-width: 1199px) and (min-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .card img {
+        height: 280px;
+    }
+}
+
+/* 3️⃣ Celulares */
+@media (max-width: 767px) {
     header {
         flex-direction: column;
         text-align: center;
     }
 
     nav {
-        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
 
-    .filmes {
-        flex-direction: column;
-        align-items: center;
+    main {
+        padding: 20px;
     }
 
-    .filme img {
-        width: 80%;
-        height: auto;
+    .card {
+        width: 90%;
     }
 
-    .banner {
+    .card img {
         height: 250px;
-    }
-
-    .banner-texto h2 {
-        font-size: 1.8rem;
-    }
-
-    .banner-texto p {
-        font-size: 1rem;
-    }
-}
-
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    nav a {
-        margin: 10px;
-    }
-
-    .filmes {
-        justify-content: space-evenly;
-    }
-
-    .filme img {
-        width: 180px;
-        height: 270px;
-    }
-
-    .banner {
-        height: 300px;
-    }
-
-    .banner-texto h2 {
-        font-size: 2rem;
-    }
-
-    .banner-texto p {
-        font-size: 1.1rem;
     }
 }
